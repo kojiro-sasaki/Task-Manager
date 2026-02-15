@@ -1,5 +1,4 @@
 mod models;
-use models::Task;
 use models::TaskManager;
 
 fn main() {
@@ -14,5 +13,7 @@ fn main() {
 
     manager.delete_task(2).unwrap();
 
+    manager.list_tasks();
+    manager.update_task(1, "Goon".to_string());
     manager.list_tasks();
 }
